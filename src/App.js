@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Cards from "./components/index.js";
+import Cards from "./components/Cards/index.js";
 import user from "./employees.json"
 
 
