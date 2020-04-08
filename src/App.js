@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="container">
       {user.map(user => {
-        return <Cards user={user}/>
+        return <Cards user={user} key={user.id}/>
       })}
       
 
