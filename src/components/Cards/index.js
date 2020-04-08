@@ -9,6 +9,7 @@ class Cards extends React.Component {
 
   render() {
     return (
+       
       <div className="profile-card">
         <div className="top-section"></div>
         <header>
@@ -39,6 +40,7 @@ class Cards extends React.Component {
           </li>
         </ul>
       </div>
+      
     );
   }
 }
