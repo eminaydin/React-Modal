@@ -9,7 +9,7 @@ class Cards extends React.Component {
   render() {
     return (
       <div className="profile-card">
-          <div className="grey"></div>
+          <div className="top-section"></div>
         <header>
           <a href="google.com">
           
