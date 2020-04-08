@@ -7,6 +7,8 @@ class Cards extends React.Component {
     super(props);
   }
 
+  
+
   render() {
 
       
@@ -26,21 +28,21 @@ class Cards extends React.Component {
         <ul className="contact-info">
           <li>
             
-            <a href="https://twitter.com/tutsplus">
+            <a href={this.props.user.contact.phone}>
              
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/social-twitter.svg"></img>
+              <img src="http://icons.iconarchive.com/icons/stalker018/mmii-flat/128/phone-icon.png"></img>
             </a>
           </li>
           <li>
-        <a href="%">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/social-envato.svg">
+        <a href={this.props.user.contact.email}>
+            <img src="http://icons.iconarchive.com/icons/designbolts/handstitch-social/256/Email-icon.png">
             </img>
         </a>
 
           </li>
           <li>
-        <a href="%">
-            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/social-codepen.svg">
+        <a href={this.props.user.contact.url}>
+            <img src="http://icons.iconarchive.com/icons/thehoth/seo/256/seo-browser-window-icon.png">
             </img>
         </a>
 
