@@ -5,7 +5,7 @@ import employees from "./employees.json"
 
 function App() {
   return (
-    <div>
+    <div className="container">
       {employees.map(users => {
         return <Cards />
       })}

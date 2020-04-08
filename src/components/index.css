@@ -1,12 +1,13 @@
 .profile-card {
   position: relative;
   width:280px;
-  margin:250px;
   padding:40px 30px 30px;
   background: #f1f1f1;
   border: 5px solid rgba(255,255,255,.7);
   text-align:center;
   border-radius:24px;
+  flex-shrink: 1;
+  align-content: space-between;
   
 }
 .top-section{
