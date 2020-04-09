@@ -1,20 +1,28 @@
 import React from "react";
 import "./index.css";
-import user from "../../employees.json";
-
+import Modals from "../Modals/index"
 class Cards extends React.Component {
   constructor(props) {
     super(props);
+    this.state ={
+      isOpen: false
+    }
+    this.openModal = this.openModal.bind(this)
   }
+openModal() {
+this.setState({
+  isOpen: true
+})
 
+}
   render() {
     return (
        
-      <div className="profile-card">
+      <div className="profile-card" onClick= {this.openModal} >
         <div className="top-section"></div>
         <header>
           <a href="google.com">
-            <img src={this.props.user.avatar}></img>
+            <img src={this.props.user.avatar} alt=""></img>
           </a>
 
           <h1>
@@ -25,17 +33,17 @@ class Cards extends React.Component {
         <ul className="contact-info">
           <li>
             <a href={this.props.user.contact.phone}>
-              <img src="http://icons.iconarchive.com/icons/stalker018/mmii-flat/128/phone-icon.png"></img>
+              <img src="http://icons.iconarchive.com/icons/stalker018/mmii-flat/128/phone-icon.png" alt=""></img>
             </a>
           </li>
           <li>
             <a href={this.props.user.contact.email}>
-              <img src="http://icons.iconarchive.com/icons/designbolts/handstitch-social/256/Email-icon.png"></img>
+              <img src="http://icons.iconarchive.com/icons/designbolts/handstitch-social/256/Email-icon.png" alt=""></img>
             </a>
           </li>
           <li>
             <a href={this.props.user.contact.url}>
-              <img src="http://icons.iconarchive.com/icons/thehoth/seo/256/seo-browser-window-icon.png"></img>
+              <img src="http://icons.iconarchive.com/icons/thehoth/seo/256/seo-browser-window-icon.png" alt=""></img>
             </a>
           </li>
         </ul>
