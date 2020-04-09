@@ -13,6 +13,7 @@ function App() {
       {user.map(user => {
         return <Cards user={user} key={user.id}/>
       })}
+      
       </div>
     </div>
   

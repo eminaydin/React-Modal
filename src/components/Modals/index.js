@@ -3,12 +3,16 @@ import "./index.css";
 
 class Modals extends React.Component {
     constructor(props) {
-        super(props)
+        super(props);
     }
  
 
     render() {
-         return "hello"
+         return (
+             <div className="modal">
+                 sdkfjsdlkfsdlkfjklds
+             </div>
+         )
         
     }
 }
