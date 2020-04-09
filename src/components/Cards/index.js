@@ -8,19 +8,23 @@ class Cards extends React.Component {
       isOpen: false,
     };
     this.openModal = this.openModal.bind(this);
+    this.indexOfUser = this.props.users.indexOf(this.props.user);
   }
   openModal() {
     this.setState({
       isOpen: true,
     });
+    this.props.userIndex(this.sendIndex());
   }
+  sendIndex() {
+    return [this.indexOfUser, this.state.isOpen];
+  };
+  
   render() {
+    
     return (
       
       <div className="profile-card" onClick={this.openModal}>
-        {this.state.isOpen ? (
-       <Modals />
-      ) : null} 
         <div className="top-section"></div>
         <header>
           <a href="google.com">

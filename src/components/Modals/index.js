@@ -9,8 +9,8 @@ class Modals extends React.Component {
 
     render() {
          return (
-             <div className="modal">
-                 sdkfjsdlkfsdlkfjklds
+             <div className={`modal ${this.props.open ? "show" : ""}`}>
+                 {this.props.children}
              </div>
          )
         
