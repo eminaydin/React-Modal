@@ -9,8 +9,6 @@ class Cards extends React.Component {
     };
     this.openModal = this.openModal.bind(this);
     this.indexOfUser = this.props.users.indexOf(this.props.user);
-   
-    
   }
   openModal() {
     this.setState({
@@ -18,20 +16,17 @@ class Cards extends React.Component {
     });  
     this.props.userIndex(this.sendIndex());
   }
- 
 
   nextPage(){
-    this.setState({
-      isOpen:true,
-    });
-    console.log(this.props.nextPerson(this.sendIndex()));
     this.props.nextPerson(this.sendIndex());
-    
-    
+  }
+  previousPage(){
+    this.props.previousPage(this.sendIndex());
   }
   
+  
   sendIndex() {
-    return [this.indexOfUser, this.state.isOpen];
+    return this.indexOfUser;
   };
 
   render() {
@@ -45,7 +40,7 @@ class Cards extends React.Component {
             <img src={this.props.user.avatar} alt=""></img>
           </a>
 
-          <h1>
+          <h1 className="header-text">
             {this.props.user.firstName} {this.props.user.lastName}
           </h1>
           <h4>{this.props.user.jobTitle}</h4>
