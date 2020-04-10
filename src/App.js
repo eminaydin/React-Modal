@@ -19,7 +19,7 @@ this.state = {
 userIndex = (cardIndex) =>  {
 this.setState({
   index: cardIndex[0],
-  open: cardIndex[1],
+  open: cardIndex[0],
 })
 }
 
@@ -39,11 +39,21 @@ render(){
         return <Cards user={user} users={users} key={user.id} userIndex = {this.userIndex}/>
       })}
       <Modals open = {this.state.open}> 
-    <h1> 
-      {}
-      
-
-    </h1>
+    
+    <div className= "modal-container"> 
+    <header>
+      <img src= {person.avatar} alt=""></img>
+    <h1> {person.firstName} {person.lastName}</h1>
+    </header>
+<h5>
+  {person.jobTitle}</h5>     
+   <p>
+        {person.bio}
+      </p>
+      <button>Previous</button>
+      <button>Next</button>
+    </div>
+   
       </Modals>
       </div>
     </div>
