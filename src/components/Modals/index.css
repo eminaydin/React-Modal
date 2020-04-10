@@ -14,14 +14,5 @@
 }
 .show {
     visibility: visible;
-}
-.modal-container{
-    border: 2px solid white;
-    height: 700px;
-    width: 900px;
-    border-radius: 20px;
-}
-h1,h5,p {
-    color: white;
-    text-align: center;
+
 }

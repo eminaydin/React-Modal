@@ -9,17 +9,31 @@ class Cards extends React.Component {
     };
     this.openModal = this.openModal.bind(this);
     this.indexOfUser = this.props.users.indexOf(this.props.user);
+   
+    
   }
   openModal() {
     this.setState({
       isOpen: true,
-    });
+    });  
     this.props.userIndex(this.sendIndex());
   }
+ 
+
+  nextPage(){
+    this.setState({
+      isOpen:true,
+    });
+    console.log(this.props.nextPerson(this.sendIndex()));
+    this.props.nextPerson(this.sendIndex());
+    
+    
+  }
+  
   sendIndex() {
     return [this.indexOfUser, this.state.isOpen];
   };
-  
+
   render() {
     
     return (
