@@ -25,10 +25,10 @@ this.setState({
 
 
 render(){
-console.log(this.state.index);
+
 
   let person = users[this.state.index];
-  console.log(person);
+
   
   
   return (

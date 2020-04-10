@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.css";
-import Modals from "../Modals/index.js"
+
 class Cards extends React.Component {
   constructor(props) {
     super(props);
