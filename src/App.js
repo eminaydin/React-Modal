@@ -55,6 +55,7 @@ class App extends React.Component {
             nextPerson={this.nextPerson}
           >
             <div className="modal-container">
+            <a href="#close" title="Close" class="close">X</a>
               <header>
                 <img src={person.avatar} alt=""></img>
                 <h1>
