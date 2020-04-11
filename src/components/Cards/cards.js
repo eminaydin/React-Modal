@@ -40,11 +40,12 @@ class Cards extends React.Component {
             <img src={this.props.user.avatar} alt=""></img>
           </a>
 
-          <h1 className="header-text">
+          <h2 className="header-text">
             {this.props.user.firstName} {this.props.user.lastName}
-          </h1>
-          <h4>{this.props.user.jobTitle}</h4>
+          </h2>
+          <span className="header-title">{this.props.user.jobTitle}</span>
         </header>
+        
         <ul className="contact-info">
           <li>
             <a href={this.props.user.contact.phone}>
@@ -71,6 +72,7 @@ class Cards extends React.Component {
             </a>
           </li>
         </ul>
+      
       
       
       </div>

@@ -2,7 +2,7 @@
 .profile-card {
   position: relative;
   width:280px;
-  padding:40px 20px 30px;
+  padding:40px 30px 30px;
   background: #f1f1f1;
   border: 5px solid rgba(255,255,255,.7);
   text-align:center;
@@ -10,7 +10,8 @@
   flex-shrink: 1;
   align-content: space-between;
   transform: scale(0.95);
-    transition: all .5s;
+  transition: all .5s;
+  height: 500px;
   
 }
 .profile-card:hover {
@@ -23,7 +24,7 @@
     right: 0;
     left: 0;
     width: 340px;
-    height: 120px;
+    height: 160px;
     background: crimson;
     border-radius: 25px 25px 0 0;
 
@@ -34,7 +35,7 @@
     height:150px;
     display:block;
     border-radius:100%;
-    margin:10px auto 0;
+    margin:50px auto 0;
     box-shadow: 0 0 0 5px #82b541;
     transform: scale(0.95);
     transition:all .5s;
@@ -49,13 +50,13 @@
     height:150px;
   }
   .contact-info{
-    margin:0;
+    margin:0px;
     padding:0;
     list-style:none;
   }
   .contact-info li {
     display: inline-block;
-    margin: 0 10px;
+    margin: 40px 10px;
   }
   .contact-info li a {
       width: 55px;
@@ -86,5 +87,18 @@
       top: 0;
   }
   .header-text {
+    font-size: 28px;
+font-weight: 500;
     color: black;
+    margin-top: 30px;
+    display: inline-block;
+  }
+  .header-title {
+display: block;    
+font-size: 26px;
+margin-top: 30px;
+  }
+  
+  header {
+    height: 350px;
   }
