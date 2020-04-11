@@ -44,6 +44,7 @@ class Cards extends React.Component {
             {this.props.user.firstName} {this.props.user.lastName}
           </h2>
           <span className="header-title">{this.props.user.jobTitle}</span>
+        
         </header>
         
         <ul className="contact-info">
