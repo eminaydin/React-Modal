@@ -38,9 +38,8 @@ border-top: 2px white; }
     margin: 60px;
     font-size: 30px;
   }
-
   .modal-title {
-    margin: 80px;
+    margin: 60px;
     font-size: 24px;
   }
   .modal-bio { grid-area: 3 / 2 / 6 / 4;
@@ -64,4 +63,34 @@ margin-right: 30px;}
     a {
       text-decoration: none;
     }
-   
+   .material-icons {
+    background-color: DodgerBlue;
+    border: 2px white;
+    border-radius: 20%;
+    color: white;
+    padding: 2px 6px;
+    font-size: 36px;
+    cursor: pointer;
+    
+   }
+button {
+  background: transparent;
+  border: none;
+}
+.line{
+  height: 0px;
+  width: 300px;
+  border: 1px solid navy;
+  grid-area: 3 / 2 / 3 / 3;
+margin-top: 5px;
+margin-left: 140px;}
+
+.modal-nav {
+  grid-area: 1 / 1 / 1 / 4;
+  background: navy;
+  height: 40px;
+  border-top-right-radius: 10%;
+  border-top-left-radius: 10%;
+  padding:0;
+
+}

@@ -60,12 +60,14 @@ class App extends React.Component {
             nextPerson={this.nextPerson}
           >
             <div class="modal-parent">
-              <div className= "modal-close"><a href="#close" title="Close" className="close" type="button" onClick={this.close}>
+              <div className="modal-nav"><div className= "modal-close"><a href="#close" title="Close" className="close" type="button" onClick={this.close}>
                 Close
-              </a></div>
+              </a></div> </div>
+              
               <div className="modal-image">
                 <img src={person.avatar} alt=""></img>{" "}
               </div>
+              <div> </div>
               <div className="modal-info">
                 <h1 className="modal-name">
                   {person.firstName} {person.lastName}
@@ -85,8 +87,10 @@ class App extends React.Component {
                   className="previous-button"
                   onClick={this.previousPerson}
                   disabled={this.state.index <= 0 ? true : false}
-                >
-                  Previous
+                ><span class="material-icons previous">
+                chevron_left
+                </span>
+                
                 </button>
               </div>
               <div className="modal-next-btn">
@@ -96,7 +100,9 @@ class App extends React.Component {
                   onClick={this.nextPerson}
                   disabled={this.state.index >= 41 ? true : false}
                 >
-                  Next Person
+                 <span class="material-icons next">
+chevron_right
+</span>
                 </button> 
               </div>
             </div>
