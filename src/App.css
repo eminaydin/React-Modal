@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   width: 70%;
   margin: 0 auto;
+  
 }
 
 
@@ -14,17 +15,13 @@
   grid-row-gap: 0px;
   height: 700px;
   width: 900px;
-  color: white;
   border: 2px solid white;
   margin: 20px;
   border-radius: 20px;
-  background: blue;
-  transform: scale(1);
-  transition: transform 0.7 ease;
+  background: white;
   }
   .modal-close { grid-area: 1 / 3 / 2 / 4;
   line-height: 50px;
-  color: rgb(255, 255, 255);
   font-size: 80%;
   position: relative;
   right: 20px;
@@ -35,7 +32,8 @@
   .modal-image { grid-area: 2 / 2 / 3 / 4; 
     text-align: center;}
   .modal-info { grid-area: 2 / 1 / 5 / 2;
-  text-align: left; }
+  text-align: left;
+border-top: 2px white; }
   .modal-name {
     margin: 60px;
     font-size: 30px;
@@ -45,7 +43,7 @@
     margin: 80px;
     font-size: 24px;
   }
-  .modal-bio { grid-area: 3 / 2 / 5 / 4;
+  .modal-bio { grid-area: 3 / 2 / 6 / 4;
   text-align: center;
   line-height: 1.6;
 margin-top: 20px;
@@ -64,7 +62,6 @@ margin-right: 30px;}
     align-self: self-end;
     justify-self: self-end; }
     a {
-      color: white;
       text-decoration: none;
     }
    
