@@ -32,6 +32,11 @@ class App extends React.Component {
       index: this.state.index - 1,
     });
   };
+  close =() => {
+    this.setState({
+      open: false
+    })
+  }
   render() {
     let person = users[this.state.index];
 
@@ -54,37 +59,46 @@ class App extends React.Component {
             users={users}
             nextPerson={this.nextPerson}
           >
-            <div className="modal-container">
-            <a href="#close" title="Close" class="close">
+            <div class="modal-parent">
+              <div className= "modal-close"><a href="#close" title="Close" className="close" type="button" onClick={this.close}>
                 Close
-              </a>
+              </a></div>
+              <div className="modal-image">
+                <img src={person.avatar} alt=""></img>{" "}
+              </div>
               <div className="modal-info">
-              <header className="modal-header">
-                <img src={person.avatar} alt=""></img>
                 <h1 className="modal-name">
                   {person.firstName} {person.lastName}
                 </h1>
-              </header>
-              <h5 className="modal-title">{person.jobTitle}</h5>
-              <p className="modal-bio">{person.bio}</p>
+                <h5 className="modal-title">{person.jobTitle}</h5>
               </div>
-              <footer className="buttons">
-                <button
+              <div className="modal-bio">
+              <p >{person.bio}</p>
+              </div>
+              <div className="modal-contacts">
+              <a href={person.contact.phone}>Phone</a>{" "}
+                <a href={person.contact.email}>Email</a>{" "}
+                <a href={person.contact.url}> Website</a>{" "}
+              </div>
+              <div className="modal-previous-btn">
+              <button
                   className="previous-button"
                   onClick={this.previousPerson}
                   disabled={this.state.index <= 0 ? true : false}
                 >
                   Previous
                 </button>
+              </div>
+              <div className="modal-next-btn">
+                
                 <button
-                  for="modal"
                   className="next-button"
                   onClick={this.nextPerson}
                   disabled={this.state.index >= 41 ? true : false}
                 >
                   Next Person
-                </button>
-              </footer>
+                </button> 
+              </div>
             </div>
           </Modals>
         </div>
