@@ -55,33 +55,37 @@ class App extends React.Component {
             nextPerson={this.nextPerson}
           >
             <div className="modal-container">
-            <a href="#close" title="Close" class="close">X</a>
-              <header>
+            <a href="#close" title="Close" class="close">
+                Close
+              </a>
+              <div className="modal-info">
+              <header className="modal-header">
                 <img src={person.avatar} alt=""></img>
-                <h1>
+                <h1 className="modal-name">
                   {person.firstName} {person.lastName}
                 </h1>
               </header>
-              <h5>{person.jobTitle}</h5>
-              <p>{person.bio}</p>
-              <div className="footer">
-                <button onClick={this.previousPerson} disabled= {this.state.index <= 0 ? true : false}>Previous</button>
-                <button onClick={this.nextPerson} disabled= {this.state.index >= 41 ? true : false}>Next</button>
-                <ul className="contact-info">
-                  <li>
-                    <a href={person.contact.phone}></a>
-                  </li>
-                  <li>
-                    <a href={person.contact.email}></a>
-                  </li>
-                  <li>
-                    <a href={person.contact.url}></a>
-                  </li>
-                </ul>{" "}
+              <h5 className="modal-title">{person.jobTitle}</h5>
+              <p className="modal-bio">{person.bio}</p>
               </div>
-
+              <footer className="buttons">
+                <button
+                  className="previous-button"
+                  onClick={this.previousPerson}
+                  disabled={this.state.index <= 0 ? true : false}
+                >
+                  Previous
+                </button>
+                <button
+                  for="modal"
+                  className="next-button"
+                  onClick={this.nextPerson}
+                  disabled={this.state.index >= 41 ? true : false}
+                >
+                  Next Person
+                </button>
+              </footer>
             </div>
-            
           </Modals>
         </div>
       </div>
