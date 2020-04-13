@@ -1,5 +1,5 @@
 .navbar {
-    background-color: #333;
+    background: linear-gradient(to bottom, #6e529d 0%,#d97b93 100%);
     margin: -20px  0 0 0 ;
     height: 100px;
   }

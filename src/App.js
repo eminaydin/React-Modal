@@ -32,11 +32,11 @@ class App extends React.Component {
       index: this.state.index - 1,
     });
   };
-  close =() => {
+  close = () => {
     this.setState({
-      open: false
-    })
-  }
+      open: false,
+    });
+  };
   render() {
     let person = users[this.state.index];
 
@@ -60,10 +60,20 @@ class App extends React.Component {
             nextPerson={this.nextPerson}
           >
             <div class="modal-parent">
-              <div className="modal-nav"><div className= "modal-close"><a href="#close" title="Close" className="close" type="button" onClick={this.close}>
-                Close
-              </a></div> </div>
-              
+              <div className={`modal-nav ${person.department === "Engineering" ? "engineer" : ""} ${person.department === "Business" ? "business" : ""}${person.department === "Design" ? "design" : ""}`}>
+                <div className="modal-close">
+                  <a
+                    href="#close"
+                    title="Close"
+                    className="close"
+                    type="button"
+                    onClick={this.close}
+                  >
+                    Close
+                  </a>
+                </div>{" "}
+              </div>
+
               <div className="modal-image">
                 <img src={person.avatar} alt=""></img>{" "}
               </div>
@@ -73,37 +83,37 @@ class App extends React.Component {
                   {person.firstName} {person.lastName}
                 </h1>
                 <h5 className="modal-title">{person.jobTitle}</h5>
+                <h5 className="modal-title">{person.department}</h5>
               </div>
               <div className="modal-bio">
-              <p >{person.bio}</p>
+                <p>{person.bio}</p>
               </div>
               <div className="modal-contacts">
-              <a href={person.contact.phone}>Phone</a>{" "}
-                <a href={person.contact.email}>Email</a>{" "}
-                <a href={person.contact.url}> Website</a>{" "}
+                <a href={person.contact.phone}>
+                  <span className="material-icons phone">call</span>{person.contact.phone}
+                </a>{" "}
+                <a href={person.contact.email}>
+                  <span className="material-icons email">email</span>{person.contact.email}
+                </a>{" "}
+                <a href={person.contact.url}>
+                  <span className="material-icons computer">computer</span>{person.contact.url}
+                </a>{" "}
               </div>
               <div className="modal-previous-btn">
-              <button
+                <button
                   className="previous-button"
                   onClick={this.previousPerson}
                   disabled={this.state.index <= 0 ? true : false}
-                ><span class="material-icons previous">
-                chevron_left
-                </span>
-                
+                >Previous
                 </button>
               </div>
-              <div className="modal-next-btn">
-                
+              <div className={`modal-next-btn ${person.department === "Engineering" ? "engineer" : ""} ${person.department === "Business" ? "business" : ""}${person.department === "Design" ? "design" : ""}`}>
                 <button
                   className="next-button"
                   onClick={this.nextPerson}
                   disabled={this.state.index >= 41 ? true : false}
-                >
-                 <span class="material-icons next">
-chevron_right
-</span>
-                </button> 
+                >Next
+                </button>
               </div>
             </div>
           </Modals>
