@@ -35,7 +35,7 @@ class Cards extends React.Component {
       
       <div className="profile-card" onClick={this.openModal}>
         <div className="top-section"></div>
-        <header>
+        <header className="header">
           <a href="google.com">
             <img src={this.props.user.avatar} alt=""></img>
           </a>
