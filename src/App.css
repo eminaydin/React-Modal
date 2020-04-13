@@ -82,16 +82,16 @@
 }
 .previous-button {
   background: none;
-	border-radius: 0;
-	padding: 1.2em 5em;
-	letter-spacing: 0.35em;
-	font-size: 0.7em;
+  border-radius: 0;
+  padding: 1.2em 5em;
+  letter-spacing: 0.35em;
+  font-size: 0.7em;
 }
 .next-button {
   background: none;
-	border-radius: 0;
-	padding: 1.2em 5em;
-	letter-spacing: 0.35em;
+  border-radius: 0;
+  padding: 1.2em 5em;
+  letter-spacing: 0.35em;
   font-size: 0.7em;
   color: white;
 }
@@ -117,28 +117,48 @@
 .close {
   color: white;
 }
-.phone,.email,.computer{
-margin:5px;
-font-size: 20px;
+.phone,
+.email,
+.computer {
+  margin: 5px;
+  font-size: 20px;
 }
 .engineer {
-  background-image: none;
-  background-color: #2d2b28f7;
-  
+  background-image: linear-gradient(-225deg, #cbbacc 0%, #2580b3 100%);
 }
 .design {
-  background-image: none;
-  background-color: #134692;
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
 }
 .business {
-  background-image: none;
-  background-color: #095e67fa;
- 
+  background-image: linear-gradient(to left, #bdbbbe 0%, #9d9ea3 100%),
+    radial-gradient(
+      88% 271%,
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(254, 254, 254, 0.25) 1%,
+      rgba(0, 0, 0, 0.25) 100%
+    ),
+    radial-gradient(
+      50% 100%,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(0, 0, 0, 0.3) 100%
+    );
+  background-blend-mode: normal, lighten, soft-light;
 }
 a {
   text-decoration: none;
 }
 button {
   outline: none;
-  
+}
+.modal-avatar {
+  transform: scale(0.95);
+  transition: all 0.5s;
+  max-width: 168px;
+  cursor: pointer;
+  border: 2px groove black;
+  border-radius: 50%;
+}
+.modal-avatar:hover {
+  transform: scale(1);
+  box-shadow: 0 37.125px 70px -12.125px rgba(0, 0, 0, 0.2);
 }

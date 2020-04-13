@@ -75,7 +75,7 @@ class App extends React.Component {
               </div>
 
               <div className="modal-image">
-                <img src={person.avatar} alt=""></img>{" "}
+                <img src={person.avatar} alt="" class="modal-avatar"></img>{" "}
               </div>
               <div> </div>
               <div className="modal-info">
@@ -90,13 +90,13 @@ class App extends React.Component {
               </div>
               <div className="modal-contacts">
                 <a href={person.contact.phone}>
-                  <span className="material-icons phone">call</span>{person.contact.phone}
+                  <span className={`material-icons phone ${person.department === "Engineering" ? "engineer" : ""} ${person.department === "Business" ? "business" : ""}${person.department === "Design" ? "design" : ""}`}>call</span>{person.contact.phone}
                 </a>{" "}
                 <a href={person.contact.email}>
-                  <span className="material-icons email">email</span>{person.contact.email}
+                  <span className={`material-icons email ${person.department === "Engineering" ? "engineer" : ""} ${person.department === "Business" ? "business" : ""}${person.department === "Design" ? "design" : ""}`}>email</span>{person.contact.email}
                 </a>{" "}
                 <a href={person.contact.url}>
-                  <span className="material-icons computer">computer</span>{person.contact.url}
+                  <span className={`material-icons computer ${person.department === "Engineering" ? "engineer" : ""} ${person.department === "Business" ? "business" : ""}${person.department === "Design" ? "design" : ""}`}>computer</span>{person.contact.url}
                 </a>{" "}
               </div>
               <div className="modal-previous-btn">
