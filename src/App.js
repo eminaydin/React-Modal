@@ -43,6 +43,7 @@ class App extends React.Component {
     return (
       <div className="container">
         <Navbar />
+        <div className="team-text"><p> Our team of <span className="team-number">42</span> strategists, designers, engineers, developers and managers<br/>make custom products for startups and leading companies. </p> </div>
         <div className="top-card">
           {users.map((user) => {
             return (
