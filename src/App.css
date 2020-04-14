@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   width: 70%;
   margin: 0px auto;
+  justify-content: center;
 }
 
 .modal-parent {
@@ -172,5 +173,5 @@ button {
 }
 .team-number {
   color: pink;
-  
+
 }
