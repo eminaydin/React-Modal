@@ -9,8 +9,7 @@
 	overflow: hidden;
     visibility: hidden;
     background-color: rgba(0, 0, 0, 0.8);
-    opacity: 0;
-    transition: opacity 2.5s ease;
+  
 }
 .show {
     visibility: visible;
@@ -24,16 +23,13 @@
 	overflow: hidden;
     background-color: rgba(0, 0, 0, 0.8);
     top: 0px;
-    opacity: 1;
+   
     
 }
 .show .modal-parent {
-    animation-name: zoom;
-  animation-duration: 0.6s;
+    animation: zoom 0.5s;
 }
-.modal-parent .show {
-  
-}
+
 @-webkit-keyframes zoom {
     from {-webkit-transform:scale(0)} 
     to {-webkit-transform:scale(1)}
@@ -43,5 +39,3 @@
     from {transform:scale(0)} 
     to {transform:scale(1)}
   }   
-  
-  

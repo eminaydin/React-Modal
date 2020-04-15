@@ -1,4 +1,6 @@
-.top-card {
+.container {
+  background-color: bisque;
+}.top-card {
   display: flex;
   flex-wrap: wrap;
   width: 70%;
@@ -271,16 +273,4 @@ display: none;
    margin: 0px 10px 20px 10px;
  }
 
-}
-.modal-parent .show {
-  animation-name: zoom-out;
-  animation-duration: 0.6s;
-}
-@-webkit-keyframes zoom-out {
-  from {-webkit-transform:scale(0)} 
-  to {-webkit-transform:scale(1)}
-}
-@keyframes zoom-out {
-  from {transform:scale(0)} 
-  to {transform:scale(1)}
 }

@@ -5,6 +5,7 @@ import users from "./employees.json";
 import Navbar from "./components/Navbar";
 import Modals from "./components/Modals";
 
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -12,8 +13,9 @@ class App extends React.Component {
       index: 0,
       open: false,
     };
-    this.modal = document.querySelector(".modal-parent");
-    this.nextPerson = this.nextPerson.bind(this);
+  
+    this.modalRef = React.createRef();
+    
   }
 
   userIndex = (cardIndex) => {
@@ -33,14 +35,24 @@ class App extends React.Component {
       index: this.state.index - 1,
     });
   };
-  close = (event) => { 
-    if (event.target!= this.modal) {
+  close = () => {
       this.setState({
         open: false,
       });
-    }
     
   };
+  componentDidMount() {
+    document.addEventListener("mousedown", this.handleMouseDown,false);
+  }
+  
+  componentWillUnmount() {
+    document.removeEventListener("mousedown", this.handleMouseDown,false);
+  }
+  handleMouseDown= (event) => {
+  if (!this.modalRef.current.contains(event.target)) {
+    this.close();
+  };
+  }
   render() {
     let person = users[this.state.index];
 
@@ -60,10 +72,13 @@ class App extends React.Component {
             );
           })}
           <Modals
-            open={this.state.open}
+            open={this.state.open ? true : false}
             users={users}
+            
+            
           >
-            <div class="modal-parent">
+            <div class="modal-parent"  ref={this.modalRef} >
+              
               <div className={`modal-nav ${person.department === "Engineering" ? "engineer" : ""} ${person.department === "Business" ? "business" : ""}${person.department === "Design" ? "design" : ""}`}>
                 <div className="modal-close">
                   <a
