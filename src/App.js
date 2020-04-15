@@ -12,6 +12,7 @@ class App extends React.Component {
       index: 0,
       open: false,
     };
+    this.modal = document.querySelector(".modal-parent");
     this.nextPerson = this.nextPerson.bind(this);
   }
 
@@ -32,10 +33,13 @@ class App extends React.Component {
       index: this.state.index - 1,
     });
   };
-  close = () => {
-    this.setState({
-      open: false,
-    });
+  close = (event) => { 
+    if (event.target!= this.modal) {
+      this.setState({
+        open: false,
+      });
+    }
+    
   };
   render() {
     let person = users[this.state.index];
@@ -58,7 +62,6 @@ class App extends React.Component {
           <Modals
             open={this.state.open}
             users={users}
-            nextPerson={this.nextPerson}
           >
             <div class="modal-parent">
               <div className={`modal-nav ${person.department === "Engineering" ? "engineer" : ""} ${person.department === "Business" ? "business" : ""}${person.department === "Design" ? "design" : ""}`}>
@@ -90,10 +93,10 @@ class App extends React.Component {
                 <p>{person.bio}</p>
               </div>
               <div className="modal-contacts">
-                <a href={person.contact.phone}>
+                <a href={`mailto: ${person.contact.phone}`}>
                   <span className={`material-icons phone ${person.department === "Engineering" ? "engineer" : ""} ${person.department === "Business" ? "business" : ""}${person.department === "Design" ? "design" : ""}`}>call</span><span className="contact-text">{person.contact.phone}</span>
                 </a>{" "}
-                <a href={person.contact.email}>
+                <a href={`mailto: ${person.contact.email}`}>
                   <span className={`material-icons email ${person.department === "Engineering" ? "engineer" : ""} ${person.department === "Business" ? "business" : ""}${person.department === "Design" ? "design" : ""}`}>email</span><span className="contact-text">{person.contact.email}</span>
                 </a>{" "}
                 <a href={person.contact.url}>

@@ -4,7 +4,7 @@ import "./index.css";
 class Modals extends React.Component {
     render() {
          return (
-             <div className={`modal ${this.props.open ? "show" : ""}`}>
+             <div className={this.props.open ? "show" : "modal"}>
                  {this.props.children}
              </div>
          )
