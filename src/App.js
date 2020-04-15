@@ -84,20 +84,20 @@ class App extends React.Component {
                   {person.firstName} {person.lastName}
                 </h1>
                 <h5 className="modal-title">{person.jobTitle}</h5>
-                <h5 className="modal-title">{person.department}</h5>
+                <h5 className="modal-department">{person.department}</h5>
               </div>
               <div className="modal-bio">
                 <p>{person.bio}</p>
               </div>
               <div className="modal-contacts">
                 <a href={person.contact.phone}>
-                  <span className={`material-icons phone ${person.department === "Engineering" ? "engineer" : ""} ${person.department === "Business" ? "business" : ""}${person.department === "Design" ? "design" : ""}`}>call</span>{person.contact.phone}
+                  <span className={`material-icons phone ${person.department === "Engineering" ? "engineer" : ""} ${person.department === "Business" ? "business" : ""}${person.department === "Design" ? "design" : ""}`}>call</span><span className="contact-text">{person.contact.phone}</span>
                 </a>{" "}
                 <a href={person.contact.email}>
-                  <span className={`material-icons email ${person.department === "Engineering" ? "engineer" : ""} ${person.department === "Business" ? "business" : ""}${person.department === "Design" ? "design" : ""}`}>email</span>{person.contact.email}
+                  <span className={`material-icons email ${person.department === "Engineering" ? "engineer" : ""} ${person.department === "Business" ? "business" : ""}${person.department === "Design" ? "design" : ""}`}>email</span><span className="contact-text">{person.contact.email}</span>
                 </a>{" "}
                 <a href={person.contact.url}>
-                  <span className={`material-icons computer ${person.department === "Engineering" ? "engineer" : ""} ${person.department === "Business" ? "business" : ""}${person.department === "Design" ? "design" : ""}`}>computer</span>{person.contact.url}
+                  <span className={`material-icons computer ${person.department === "Engineering" ? "engineer" : ""} ${person.department === "Business" ? "business" : ""}${person.department === "Design" ? "design" : ""}`}>computer</span><span className="contact-text">{person.contact.url}</span>
                 </a>{" "}
               </div>
               <div className="modal-previous-btn">

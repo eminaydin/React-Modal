@@ -51,6 +51,12 @@
   border-left: 2px solid black;
   padding-left: 20px;
 }
+.modal-department {
+  margin: 60px;
+  font-size: 24px;
+  border-left: 2px solid black;
+  padding-left: 20px;
+}
 .modal-bio {
   grid-area: 3 / 2 / 6 / 4;
   text-align: center;
@@ -174,4 +180,98 @@ button {
 .team-number {
   color: pink;
 
+}
+@media only screen and (max-width:768px) {
+  .modal-parent{
+    width: 100%;
+  }
+  .modal-info {
+    grid-area: 2 / 1 / 5 / 3;
+  }
+  .modal-name {
+    margin: 0;
+    margin-top: 25%;
+    margin-bottom: 15%;
+    width: 100px;
+  }
+  .modal-title {
+    margin: 0;
+    width: 100px;
+  }
+  .modal-department {
+    margin: 0;
+    margin-top: 40px;
+  }
+  .modal-close {
+    position: absolute;
+    right: 5%;
+  }
+  .modal-bio {
+    overflow: scroll;
+    margin-top: 0;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  .contact-text {
+display: none;
+  }
+ .modal-contacts {
+   grid-area: 6 / 1 / 6 / 4;
+   height: 35px;
+   border-bottom: 2px solid black;
+   padding: 0;
+   margin-left: 0;
+ }
+
+}
+@media only screen and (max-width:375px) {
+  .modal-parent{
+    width: 100%;
+  }
+  .modal-image {
+    margin-right: 10px;
+  }
+  .modal-info {
+    grid-area: 2 / 1 / 5 / 3;
+  }
+  .modal-name {
+    margin: 0;
+    margin-top: 25%;
+    margin-bottom: 50%;
+  }
+  .modal-title {
+    margin: 0;
+  }
+  .modal-department {
+    margin: 0;
+    margin-top: 40px;
+  }
+  .modal-close {
+    position: absolute;
+    right: 1%;
+    top: 0%;
+  }
+  .modal-bio {
+    overflow: scroll;
+    margin-top: 0;
+    margin-right: 34px;
+    margin-bottom: 10px;
+  }
+  .contact-text {
+display: none;
+  }
+ .modal-contacts {
+   grid-area: 6 / 1 / 6 / 4;
+   height: 35px;
+   border-bottom: 2px solid black;
+   padding: 0;
+   margin-left: 10px;
+ }
+ .modal-previous-btn {
+   margin: 0px 10px 20px 10px;
+ }
+
+}
+@media only screen and (min-width:768px) {
+  
 }
