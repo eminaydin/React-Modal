@@ -9,7 +9,6 @@
 	overflow: hidden;
     visibility: hidden;
     background-color: rgba(0, 0, 0, 0.8);
-  
 }
 .show {
     visibility: visible;
@@ -24,7 +23,6 @@
     background-color: rgba(0, 0, 0, 0.8);
     top: 0px;
    
-    
 }
 .show .modal-parent {
     animation: zoom 0.5s;

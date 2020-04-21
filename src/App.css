@@ -1,6 +1,7 @@
 .container {
   background-color: bisque;
-}.top-card {
+}
+.top-card {
   display: flex;
   flex-wrap: wrap;
   width: 70%;
@@ -133,27 +134,62 @@
   font-size: 20px;
 }
 .engineer {
-  background-image: linear-gradient(-225deg, #cbbacc 0%, #2580b3 100%);
+  background: linear-gradient(
+      135deg,
+      #708090 21px,
+      #d9ecff 22px,
+      #d9ecff 24px,
+      transparent 24px,
+      transparent 67px,
+      #d9ecff 67px,
+      #d9ecff 69px,
+      transparent 69px
+    ),
+    linear-gradient(
+        225deg,
+        #708090 21px,
+        #d9ecff 22px,
+        #d9ecff 24px,
+        transparent 24px,
+        transparent 67px,
+        #d9ecff 67px,
+        #d9ecff 69px,
+        transparent 69px
+      )
+      0 64px;
+  background-color: #708090;
+  background-size: 64px 128px;
 }
 .design {
-  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
-}
-.business {
-  background-image: linear-gradient(to left, #bdbbbe 0%, #9d9ea3 100%),
-    radial-gradient(
-      88% 271%,
-      rgba(255, 255, 255, 0.25) 0%,
-      rgba(254, 254, 254, 0.25) 1%,
-      rgba(0, 0, 0, 0.25) 100%
+  background: radial-gradient(
+      circle at 100% 50%,
+      transparent 20%,
+      rgba(255, 255, 255, 0.3) 21%,
+      rgba(255, 255, 255, 0.3) 34%,
+      transparent 35%,
+      transparent
     ),
     radial-gradient(
-      50% 100%,
-      rgba(255, 255, 255, 0.3) 0%,
-      rgba(0, 0, 0, 0.3) 100%
-    );
-  background-blend-mode: normal, lighten, soft-light;
+        circle at 0% 50%,
+        transparent 20%,
+        rgba(255, 255, 255, 0.3) 21%,
+        rgba(255, 255, 255, 0.3) 34%,
+        transparent 35%,
+        transparent
+      )
+      0 -50px;
+  background-color: slategray;
+  background-size: 75px 100px;
 }
- a {
+.business {
+  background: radial-gradient(black 15%, transparent 16%) 0 0,
+    radial-gradient(black 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 8px 9px;
+  background-color: #282828;
+  background-size: 16px 16px;
+}
+a {
   text-decoration: none;
 }
 .modal-contacts a {
@@ -181,10 +217,9 @@ button {
 }
 .team-number {
   color: pink;
-
 }
-@media only screen and (max-width:768px) {
-  .modal-parent{
+@media only screen and (max-width: 768px) {
+  .modal-parent {
     width: 100%;
   }
   .modal-info {
@@ -215,19 +250,18 @@ button {
     margin-bottom: 10px;
   }
   .contact-text {
-display: none;
+    display: none;
   }
- .modal-contacts {
-   grid-area: 6 / 1 / 6 / 4;
-   height: 35px;
-   border-bottom: 2px solid black;
-   padding: 0;
-   margin-left: 0;
- }
-
+  .modal-contacts {
+    grid-area: 6 / 1 / 6 / 4;
+    height: 35px;
+    border-bottom: 2px solid black;
+    padding: 0;
+    margin-left: 0;
+  }
 }
-@media only screen and (max-width:375px) {
-  .modal-parent{
+@media only screen and (max-width: 375px) {
+  .modal-parent {
     width: 100%;
   }
   .modal-image {
@@ -260,17 +294,16 @@ display: none;
     margin-bottom: 10px;
   }
   .contact-text {
-display: none;
+    display: none;
   }
- .modal-contacts {
-   grid-area: 6 / 1 / 6 / 4;
-   height: 35px;
-   border-bottom: 2px solid black;
-   padding: 0;
-   margin-left: 10px;
- }
- .modal-previous-btn {
-   margin: 0px 10px 20px 10px;
- }
-
+  .modal-contacts {
+    grid-area: 6 / 1 / 6 / 4;
+    height: 35px;
+    border-bottom: 2px solid black;
+    padding: 0;
+    margin-left: 10px;
+  }
+  .modal-previous-btn {
+    margin: 0px 10px 20px 10px;
+  }
 }
