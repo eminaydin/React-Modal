@@ -1,9 +1,9 @@
 import React from "react";
 import "./App.css";
-import Cards from "./components/Cards/cards.js";
+import Cards from "./components/Cards/cards";
 import users from "./employees.json";
-import Navbar from "./components/Navbar";
-import Modals from "./components/Modals";
+import Navbar from "./components/Navbar/navbar";
+import Modal from "./components/Modal/modal";
 
 
 class App extends React.Component {
@@ -13,9 +13,9 @@ class App extends React.Component {
       index: 0,
       open: false,
     };
-  
+
     this.modalRef = React.createRef();
-    
+
   }
 
   userIndex = (cardIndex) => {
@@ -36,22 +36,22 @@ class App extends React.Component {
     });
   };
   close = () => {
-      this.setState({
-        open: false,
-      });
-    
+    this.setState({
+      open: false,
+    });
+
   };
   componentDidMount() {
-    document.addEventListener("mousedown", this.handleMouseDown,false);
+    document.addEventListener("mousedown", this.handleMouseDown, false);
   }
-  
+
   componentWillUnmount() {
-    document.removeEventListener("mousedown", this.handleMouseDown,false);
+    document.removeEventListener("mousedown", this.handleMouseDown, false);
   }
-  handleMouseDown= (event) => {
-  if (!this.modalRef.current.contains(event.target)) {
-    this.close();
-  };
+  handleMouseDown = (event) => {
+    if (!this.modalRef.current.contains(event.target)) {
+      this.close();
+    };
   }
   render() {
     let person = users[this.state.index];
@@ -59,7 +59,7 @@ class App extends React.Component {
     return (
       <div className="container">
         <Navbar />
-        <div className="team-text"><p> Our team of <span className="team-number">42</span> strategists, designers, engineers, developers and managers<br/>make custom products for startups and leading companies. </p> </div>
+        <div className="team-text"><p> Our team of <span className="team-number">42</span> strategists, designers, engineers, developers and managers<br />make custom products for startups and leading companies. </p> </div>
         <div className="top-card">
           {users.map((user) => {
             return (
@@ -71,14 +71,14 @@ class App extends React.Component {
               />
             );
           })}
-          <Modals
+          <Modal
             open={this.state.open ? true : false}
             users={users}
-            
-            
+
+
           >
-            <div class="modal-parent"  ref={this.modalRef} >
-              
+            <div className="modal-parent" ref={this.modalRef} >
+
               <div className={`modal-nav ${person.department === "Engineering" ? "engineer" : ""} ${person.department === "Business" ? "business" : ""}${person.department === "Design" ? "design" : ""}`}>
                 <div className="modal-close">
                   <a
@@ -94,7 +94,7 @@ class App extends React.Component {
               </div>
 
               <div className="modal-image">
-                <img src={person.avatar} alt="" class="modal-avatar"></img>{" "}
+                <img src={person.avatar} alt="" className="modal-avatar"></img>{" "}
               </div>
               <div> </div>
               <div className="modal-info">
@@ -135,7 +135,7 @@ class App extends React.Component {
                 </button>
               </div>
             </div>
-          </Modals>
+          </Modal>
         </div>
       </div>
     );
