@@ -82,7 +82,7 @@ class App extends React.Component {
               <div className={`modal-nav ${person.department === "Engineering" ? "engineer" : ""} ${person.department === "Business" ? "business" : ""}${person.department === "Design" ? "design" : ""}`}>
                 <div className="modal-close">
                   <a
-                    href="#close"
+                    href=""
                     title="Close"
                     className="close"
                     type="button"
