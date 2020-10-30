@@ -86,7 +86,7 @@ class App extends React.Component {
                 }`}
               >
                 <div className="modal-close">
-                  <a
+                  <span
                     href=""
                     title="Close"
                     className="close"
@@ -94,7 +94,7 @@ class App extends React.Component {
                     onClick={this.close}
                   >
                     Close
-                  </a>
+                  </span>
                 </div>{" "}
               </div>
 
