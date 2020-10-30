@@ -24,16 +24,13 @@ class Cards extends React.Component {
     this.props.previousPage(this.sendIndex());
   }
 
-
   sendIndex() {
     return this.indexOfUser;
-  };
+  }
 
   render() {
-
     return (
-
-      <div className="profile-card" >
+      <div className="profile-card">
         <div className="top-section" onClick={this.openModal}></div>
         <header className="header" onClick={this.openModal}>
           <a href="#close">
@@ -46,7 +43,11 @@ class Cards extends React.Component {
         </header>
         <ul className="contact-info">
           <li>
-            <a href={`tel:${this.props.user.contact.phone}`} target="_blank" rel="noopener noreferrer">
+            <a
+              href={`tel:${this.props.user.contact.phone}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src="http://icons.iconarchive.com/icons/stalker018/mmii-flat/128/phone-icon.png"
                 alt=""
@@ -54,7 +55,11 @@ class Cards extends React.Component {
             </a>
           </li>
           <li>
-            <a href={`mailto: ${this.props.user.contact.email}`} target="_blank" rel="noopener noreferrer">
+            <a
+              href={`mailto: ${this.props.user.contact.email}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src="http://icons.iconarchive.com/icons/designbolts/handstitch-social/256/Email-icon.png"
                 alt=""
@@ -62,7 +67,11 @@ class Cards extends React.Component {
             </a>
           </li>
           <li>
-            <a href={this.props.user.contact.url} target="_blank" rel="noopener noreferrer">
+            <a
+              href={this.props.user.contact.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src="http://icons.iconarchive.com/icons/thehoth/seo/256/seo-browser-window-icon.png"
                 alt=""
