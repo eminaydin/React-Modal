@@ -1,11 +1,29 @@
-## The Project
+## React Modal
 
-This is the project which helped me to master my skills on React. I've faked a company and created a webpage about the team members. There is a json file with a fake dummy data for each person. Simply, every person in the team represented by a card with a possibility to reach their contact data directly from the links on the card. If user wants to get more data about specific member, by clicking on the card, modal window about that specific member will be displayed. Then user can access to more information about the member. 
+<a href="https://spa-modal.now.sh/" target="_blank"><h3 align="left">Click here for demo</h3></a>
 
-I've challenged myself more by dedicating specific theme for each department and then to change the theme whenever user is on modal window. So the theme of the modal window will be changing dynamically according to the department of that team member belongs to. There is also two buttons allows user to scroll through team members back and forth. Once user is on the last team member, buttons will be disabled. At last, user can either click on close text to close the modal window or simply by clicking outside of the modal.
+## Table of Contents
 
-## Challenges 
+- [General info](#general-info)
+- [Preview](#preview)
+- [Technologies](#technologies)
+- [Contact](#contact)
 
-I could use a library to create a modal with already defined css but I wanted to create it on my own. This took my time a bit but also helped me to improve myself on React. Thanks to that I discovered `refs` and got familiar with it. To have a functionality to let user go back and forth was also challenging. Then I came up with an idea to check for the index of clicked item and then change it accordingly. 
+## General Info
 
-All in all, I've learnt a lot from this exercise and developed my skills on React. You can check out the live version on this link here: https://spa-modal.now.sh/
+React Modal exercise. Fake information about non existing employees are used to display data. Each team member has a card on its own. User can choose among the employees and then check the individual information about respective employee. Once user is on the modal, by previous and next buttons, user can scroll through all members. I particularly like this project since it was very beginning of my React journey and I have created the modal window on my own without any CSS libraries. Feel free to check it out!
+
+## Preview
+
+![React Modal](src/assets/modal.gif)
+
+## Technologies
+
+- HTML
+- CSS
+- Javascript
+- React
+
+## Contact
+
+Created by [eminaydin](https://github.com/eminaydin) - feel free to contact me for any inquiries!
